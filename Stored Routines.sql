@@ -1,2 +1,10 @@
-# Stored Routines : an SQL statement that can be stored on the database server 
-# Stored Routines are of 2 types they are 1.stored procedures: which is equal to procedures and 2.functions: Which are user defined functions.
+SET @v_emp_no = 11300;
+SELECT 
+    emp_no,
+    first_name,
+    last_name,
+    F_EMP_AVG_SALARY(@v_emp_no) AS avg_salary
+FROM
+    employees
+WHERE
+    emp_no = @v_emp_no;
